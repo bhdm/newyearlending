@@ -1,0 +1,134 @@
+<html>
+<head>
+    <script src="{{ asset('bundles/app/js/jquery-1.11.3.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/reset.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/style.css') }}">
+
+    <script src="{{ asset('bundles/app/js/fancybox/jquery.fancybox.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('bundles/app/js/fancybox/jquery.fancybox.css') }}">
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".fancybox").fancybox();
+        });
+    </script>
+</head>
+<body>
+    <header class="center">
+        <img src="{{ asset('bundles/app/images/logo.png') }}" style="margin-top: 10px">
+    </header>
+    <div class="content">
+        <div class="center">
+            <img src="{{ asset('bundles/app/images/withny.png') }}" id="withny">
+            <h1>
+                Дорогие коллеги!
+            </h1>
+            <p>
+                Поздравляем Вас с праздником<br />
+                и предлагаем поделиться новогодним настроением <br />
+                с друзьями и близкими!
+            </p>
+            <br />
+            <br />
+            <p>
+                <em>Для этого:</em>
+            </p>
+            <br />
+            <br />
+            <div class="row" style="height: 84px;">
+                <div class="item-1">
+                    <img src="{{ asset('bundles/app/images/c1.png') }}">
+                </div>
+                <div class="item-2">
+                    Выберите один из предложенных вариантов открытки
+                </div>
+                <div class="item-1">
+                    <img src="{{ asset('bundles/app/images/c2.png') }}">
+                </div>
+                <div class="item-2">
+                    Впишите в соответствующее поле электронный адрес получателя
+                </div>
+                <div class="item-1">
+                    <img src="{{ asset('bundles/app/images/c3.png') }}">
+                </div>
+                <div class="item-2">
+                    Впишите текст поздравления в форму
+                </div>
+                <div class="item-1">
+                    <img src="{{ asset('bundles/app/images/c4.png') }}">
+                </div>
+                <div class="item-2">
+                    Нажмите <br /><b>"Отправить"</b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item-4 center">
+                        <img src="{{ asset('bundles/app/images/template-1.png') }}" class="thrumb">
+                    <br />
+                    <br />
+                    <a href="{{ asset('bundles/app/images/template-1.png') }}" class="fancybox">
+                        <div class="btn-show" data-num="1">Посмотреть</div>
+                    </a>
+                </div>
+                <div class="item-4 center">
+                        <img src="{{ asset('bundles/app/images/template-2.png') }}" class="thrumb">
+                    <br />
+                    <br />
+                    <a href="{{ asset('bundles/app/images/template-2.png') }}" class="fancybox">
+                        <div class="btn-show" data-num="2">Посмотреть</div>
+                    </a>
+                </div>
+                <div class="item-4 center">
+                    <img src="{{ asset('bundles/app/images/template-3.png') }}" class="thrumb">
+                    <br />
+                    <br />
+                    <a href="{{ asset('bundles/app/images/template-2.png') }}" class="fancybox">
+                        <div class="btn-show" data-num="3">Посмотреть</div>
+                    </a>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div style="width: 800px; margin: 0 auto">
+                <form class="form">
+                    <div class="row nopadding">
+                        <div class="item-5">
+                            <input type="email" placeholder="Впишите e-mail получателя">
+                        </div>
+                        <div class="item-2">&nbsp;</div>
+                        <div class="item-5">
+                            <input type="text" placeholder="Имя и Фамилию отправителя">
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <textarea placeholder="Впишите текст поздравления"></textarea>
+                    <br />
+                    <br />
+                    <div class="center">
+                        <div class="btn-send" data-num="3">Отправить</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+    </div>
+<footer>
+    <div class="">
+        <div class="footer-1">
+            Неврология.инфо, 2015. Все права защищены.<br />
+            ООО "Такеда Фармасьютикал"<br />
+            Адрес: 119048 Москва, ул. Усачев д.2 стр.1, бизнес-цунтр "Фьюжн Парк".
+            <br />
+            <br />
+            Заявления о нарушении смежных и авторских прав может быть отправлено <br />
+            по адресу: info@nevrologia.infoю
+        </div>
+        <div class="footer-2">
+            <img src="{{ asset('bundles/app/images/logo2.png') }}">
+        </div>
+    </div>
+</footer>
+</body>
+</html>
