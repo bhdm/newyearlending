@@ -15,6 +15,7 @@
                 $('.th2').removeClass('active');
                 $('.th3').removeClass('active');
                 $('.th'+$(this).attr('data-num')).addClass('active');
+                $('#number').val($(this).attr('data-num'));
             }) ;
             $('.btn-send').click(function(){
                 $('.form').submit();
@@ -98,6 +99,9 @@
             </div>
             <br />
             <br />
+            {% if post == true %}
+            <div class="notify">Ваше сообщение отправлено</div>
+            {% endif %}
             <div style="width: 800px; margin: 0 auto">
                 <form class="form" method="POST">
                     <div class="row nopadding">
@@ -117,6 +121,7 @@
                     <div class="center">
                         <div class="btn-send" data-num="3">Отправить</div>
                     </div>
+                    <input type="hidden" name="number" value="1" id="number">
                 </form>
             </div>
         </div>

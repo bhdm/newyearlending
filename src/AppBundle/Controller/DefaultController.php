@@ -17,21 +17,29 @@ class DefaultController extends Controller
             $email = htmlspecialchars($request->request->get('email'));
             $fio = htmlspecialchars($request->request->get('fio'));
             $txt = htmlspecialchars($request->request->get('txt'));
+            $number = htmlspecialchars($request->request->get('number'));
 
 
-            $this->get('email.service')->send(
-                $email,
-                array('LearningMainBundle:default:1.html.twig', array(
-                    'fio'     => $fio,
-                    'txt'     => $txt,
-                )),
-                'Открытка с сайта Неврология.инфо'
-            );
+            $message = \Swift_Message::newInstance()
+                ->setSubject('Новогоднее поздравление')
+                ->setFrom('noreply@evrika.ru')
+                ->setTo($email)
+                ->setBody(
+                    $this->renderView(
+                        'AppBundle:default:'.$number.'.html.twig',
+                        array(
+                            'fio'     => $fio,
+                            'txt'     => $txt,
+                        )
+                    ),
+                    'text/html'
+                );
 
 
+            return $this->render('AppBundle:default:index.html.twig', ['post' => true]);
         }
 
         // replace this example code with whatever you need
-        return $this->render('AppBundle:default:index.html.twig');
+        return $this->render('AppBundle:default:index.html.twig', ['post' => false]);
     }
 }

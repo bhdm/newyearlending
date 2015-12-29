@@ -141,3 +141,10 @@ textarea{
 .active{
     -webkit-filter: brightness(50%);
 }
+.notify{
+    background: #91D0DA;
+    padding: 10px 30px;
+    margin: 20px;
+    font-size: 18px;
+    color: #C7332B;
+}

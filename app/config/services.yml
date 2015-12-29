@@ -6,6 +6,6 @@ services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
-    email.service:
-        class: AppBundle\Service\EmailService
-        arguments: ["service_container", "templating"]
+#    email.service:
+#        class: AppBundle\Service\EmailService
+#        arguments: ["service_container", "templating"]
