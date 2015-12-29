@@ -138,3 +138,6 @@ textarea{
 .nopadding{
     padding: 0;
 }
+.active{
+    -webkit-filter: brightness(50%);
+}

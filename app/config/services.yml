@@ -2,8 +2,10 @@
 # http://symfony.com/doc/current/book/service_container.html
 parameters:
 #    parameter_name: value
-
 services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    email.service:
+        class: AppBundle\Service\EmailService
+        arguments: ["service_container", "templating"]

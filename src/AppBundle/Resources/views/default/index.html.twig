@@ -9,6 +9,16 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $(".fancybox").fancybox();
+
+            $('.btn-show').click(function(){
+                $('.th1').removeClass('active');
+                $('.th2').removeClass('active');
+                $('.th3').removeClass('active');
+                $('.th'+$(this).attr('data-num')).addClass('active');
+            }) ;
+            $('.btn-send').click(function(){
+                $('.form').submit();
+            })
         });
     </script>
 </head>
@@ -62,46 +72,46 @@
             </div>
             <div class="row">
                 <div class="item-4 center">
-                        <img src="{{ asset('bundles/app/images/template-1.png') }}" class="thrumb">
-                    <br />
-                    <br />
-                    <a href="{{ asset('bundles/app/images/template-1.png') }}" class="fancybox">
-                        <div class="btn-show" data-num="1">Посмотреть</div>
+                    <a href="{{ asset('bundles/app/images/1.jpg') }}" class="fancybox">
+                        <img src="{{ asset('bundles/app/images/template-1.png') }}" class="thrumb th1">
                     </a>
+                    <br />
+                    <br />
+                        <div class="btn-show" data-num="1">Выбрать</div>
                 </div>
                 <div class="item-4 center">
-                        <img src="{{ asset('bundles/app/images/template-2.png') }}" class="thrumb">
-                    <br />
-                    <br />
-                    <a href="{{ asset('bundles/app/images/template-2.png') }}" class="fancybox">
-                        <div class="btn-show" data-num="2">Посмотреть</div>
+                    <a href="{{ asset('bundles/app/images/2.jpg') }}" class="fancybox">
+                        <img src="{{ asset('bundles/app/images/template-2.png') }}" class="thrumb th2">
                     </a>
+                    <br />
+                    <br />
+                        <div class="btn-show" data-num="2">Выбрать</div>
                 </div>
                 <div class="item-4 center">
-                    <img src="{{ asset('bundles/app/images/template-3.png') }}" class="thrumb">
-                    <br />
-                    <br />
-                    <a href="{{ asset('bundles/app/images/template-2.png') }}" class="fancybox">
-                        <div class="btn-show" data-num="3">Посмотреть</div>
+                    <a href="{{ asset('bundles/app/images/3.jpg') }}" class="fancybox">
+                        <img src="{{ asset('bundles/app/images/template-3.png') }}" class="thrumb th3">
                     </a>
+                    <br />
+                    <br />
+                        <div class="btn-show" data-num="3">Выбрать</div>
                 </div>
             </div>
             <br />
             <br />
             <div style="width: 800px; margin: 0 auto">
-                <form class="form">
+                <form class="form" method="POST">
                     <div class="row nopadding">
                         <div class="item-5">
-                            <input type="email" placeholder="Впишите e-mail получателя">
+                            <input type="email" placeholder="Впишите e-mail получателя" required name="email">
                         </div>
                         <div class="item-2">&nbsp;</div>
                         <div class="item-5">
-                            <input type="text" placeholder="Имя и Фамилию отправителя">
+                            <input type="text" placeholder="Имя и Фамилию отправителя" required name="fio">
                         </div>
                     </div>
                     <br />
                     <br />
-                    <textarea placeholder="Впишите текст поздравления"></textarea>
+                    <textarea placeholder="Впишите текст поздравления" required name="txt"></textarea>
                     <br />
                     <br />
                     <div class="center">
@@ -130,5 +140,6 @@
         </div>
     </div>
 </footer>
+
 </body>
 </html>
